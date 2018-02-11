@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;  
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.box{  
+    font-size: 14px;
+    width: 100%;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    overflow: hidden;
+}
+.headers{
+    width: 100%;
+    height: 60px;
+    background:#fff;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+    color: #333;
+    background: #dec;
+} 
+.headers span{
+    font-size: 20px;
+}
+.headers .left{
+     position: absolute;
+     left: 30px;
+     font-size: 20px;
+}
+.sections{
+    -webkit-flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+} 
+.sections .list{
+    width: 100%;
+    height: 360px;
+    position: relative;
+}
+.sections .list_img{
+    width: 100%;
+    height: 360px;
+    background: url(../img/timg.jpg);
+    background-size: 100% 100%;
+  
+}
+.sections .list_bg{
+ 
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      left: 40%;
+   
+}
+.sections .list_bg .begin{
+    width: 80px;
+    height: 40px;
+    background: rgb(240, 240, 76);
+    border: 1px solid #ccc;
+}
+.sections .gender{
+      display: flex;
+      height: auto;
+      background: pink;
+}
+
+.sections .gender .list{
+    flex: 1;
+  position: relative;
+
+}
+.sections .gender .list .centers{
+     width: 80%;
+     height: 80%;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate3d(-50%,-50%,0); 
+    
+}
+.sections .gender .list .centers .cent_img{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0); 
+    background: url(../img/xing.jpg);
+    background-size: 100% 100%;
+}
+
+.sections .gender .list .centers p{
+    height: 30px;
+   text-align: center;
+   margin-top: 10px;
+   color: #C13C2C;
+}
+.sections .gender .list .centers .choose{
+     height: 50px;
+     margin-top: 30px;
+     display: flex;
+    
+} 
+.sections .gender .list .centers .ch_left{
+   flex: 1;
+   margin-left: 20px;
+ 
+
+} 
+.sections .gender .list .centers .ch_right{
+    flex: 1;
+    margin-left: 20px;
+ } 
+ .sections .gender .list .centers label{
+     margin-left: 30px;
+ } 
+
+ .sections .gender .list .keep{
+     height: 30px;
+     border: 1px solid #ccc;
+  position: absolute;
+  bottom: 10px;
+  left: 35%;
+ }
+ .go_on{
+  width: 80px;
+  height:30px;
+  border: 1px solid #ccc;
+  color: #f00;
+  font-size: 16px;
+  background: #FED467;
+  border-radius: 10px;
+ }
+.list_list{
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+.list_list p{
+}
+.list_list p span{
+    border: 1px solid #ccc;
+    margin-left: 5%;
+    color: #333;
+   
+}
+
+
+
+

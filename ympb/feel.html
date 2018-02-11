@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="font/iconfont.css">
+    <title>Document</title>
+</head>
+<style>
+.headers{
+    width: 100%;
+    height: 60px;
+    background:#dec;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+} 
+.headers .left{
+    font-size: 20px;
+    position: absolute;
+    left: 30px;
+}
+.sections{
+    -webkit-flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+} 
+.sections .list{
+    width: 100%;
+    height: 360px;
+    background: #f6514b;
+    position: relative;
+
+}
+.sections .list .list_cent{
+     width: 90%;
+     height: 80%;
+     background: #fedc83;
+     margin-bottom: 20px;
+     z-index: 99;
+     position: absolute;
+     left: 5%;
+     bottom: 10%;
+}
+.sections .list .list_cent p{
+    margin-left:20px;
+    font-size: 14px;
+}
+
+
+.begin .btn{
+ width: 80px;
+ height: 30px;
+ background: #fec434;
+ border:none;
+margin-top: 30px;
+}
+
+</style>
+
+<body>
+    <div class="wrap">
+
+        <header class="headers">
+            <span class="left">
+                <i class="iconfont">&#xe679;</i>
+            </span>
+            <span class="cent">基本信息</span>
+        </header>
+        <section class="sections">
+            <div class="list">
+                <div class="list_cent">
+                    <p> 您的皮肤一抓就红，并出现抓痕吗？</p>
+                    <div class="cent">
+                      <span>没有</span>
+                      <span>很少</span>
+                      <span>有时</span>
+                      <span>经常</span>
+                      <span>总是</span>
+                    </div>
+                    <div class="begin"> 
+                            <!-- <button class="btn">开始测试</button> -->
+                    </div >
+                </div>
+
+            </div>
+
+        </section>
+        <footer class="footer"></footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+       <script src="lib/react.js"></script>
+       <script src="lib/react-dom.js"></script>
+       <script src="lib/babel.min.js"></script>
+      <style lang="">
+          .box{
+              border: 1px solid #ccc;
+          }
+      </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Tick(props){
+           let {time,tag}=props;
+            
+            console.log(new Date(time));
+            let styleObject={
+                "background":"#f00",
+                "color":"#fff"
+            }
+            
+            let el;
+            switch (tag){
+        
+                case 'h1':
+                el=(<h1 style={styleObject}>{new Date(time).toString()}</h1>)        
+                 break;
+                case 'h2':
+                el=(<h2 style={styleObject}>{new Date(time).toString()}</h2>)        
+                break;
+                case 'h3':
+                el=(<h3 style={styleObject}>{new Date(time).toString()}</h3>)        
+                break;
+                default:
+                break;
+                
+            }
+            
+            
+            return el;
+        }
+     //高级组件
+    class Test extends React.Component{
+
+        componentWillMount(){
+            console.log("WillMount")
+        }
+        
+        render(){
+            console.log("render");
+            console.log(this.props);
+            const {msg}=this.props
+            return (<h3>{msg}</h3>)
+        }
+        componentDidMount(){
+            console.log("DidMount")
+        }
+        componentWillReciveProps(){
+            console.log("WillReciveProps")
+        }
+        
+        shouldComponentUpdate(){
+            console.log("ShouldUpdata");
+            return true;
+        }
+        
+        componentWillUpdate(){
+            console.log("WillUpdate")
+        }
+        componnetDidUpdate(){
+            console.log("DidUpdate")
+        }
+        componentWillUnmount(){
+            console.log("WillUnmount")
+        }
+    }
+         
+
+         let time1="2017-12-25";
+       
+         
+         class Root extends React.Component{
+             constructor(){
+                 super();
+                 this.state={
+                     msg:"hello World!!!",
+                     flag:true
+                }
+                   this.sayHi=this.sayHi.bind(this)
+             }
+              
+//             state={
+//                  msg:"hello World!!!",
+//                     flag:true
+//             }
+             componentDidMount(){
+                 setTimeout(()=>{
+                     this.setState({
+                         msg:"hello World..."
+                     })
+                 },3000)
+                 setTimeout(()=>{
+                     this.setState({
+                         msg:"hello World...",
+                         flag:false
+                     })
+                 },4000)
+             }
+             sayHi(){
+                 alert("666")
+             }
+             render(){
+                 
+                  let arr=[1,2,3];
+                
+                  return(
+                     <div className="container">
+          
+                      <h1>Hello, world!</h1>
+                      <ul className="box">
+                         
+                          
+                          
+                          <li onClick={this.sayHi} onMouseover={function(params){
+                                   console.log("mouseover")
+                              }}>halou!!</li>
+                          <li>{arr.map((item,index)=>{
+                                   return <Tick key={index} time={time1} tag={'h'+item} />
+                              })}</li> 
+                
+                          <li>{this.state.flag && <Test msg={this.state.msg} /> }</li>
+             
+                      </ul>
+          </div>
+                  )
+                  
+             }
+         }
+         
+
+      ReactDOM.render(
+          <Root />
+         ,
+          
+        document.getElementById('root')
+      );
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      To set up a production-ready React build environment, follow these instructions:
+      * https://reactjs.org/docs/add-react-to-a-new-app.html
+      * https://reactjs.org/docs/add-react-to-an-existing-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      * https://reactjs.org/docs/react-without-jsx.html
+      * https://reactjs.org/docs/cdn-links.html
+    -->
+  </body>
+</html>

@@ -1,0 +1,40 @@
+
+.todo-item{
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.checkbox{
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    position: relative;
+    margin-right: 10px;
+}
+.checked{
+    color: #333;
+    text-decoration: line-through;
+}
+.checked .checkbox:after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 14px;
+    height: 5px;
+    border: 1px solid#fff;
+    border-bottom-color: lightblue;
+    border-left-color: lightblue;
+    transform: rotate(-45deg);
+}
+.todolist button{
+    border: none;
+    outline: none;
+    background: #fff;
+}
+.todolist .selected{
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}

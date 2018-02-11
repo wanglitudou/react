@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;  
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.box{
+    font-size: 14px;
+    width: 100%;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    overflow: hidden;
+}
+.headers{
+    width: 100%;
+    height: 60px;
+    background:#dec;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+} 
+.headers .left{
+    font-size: 20px;
+    position: absolute;
+    left: 30px;
+}
+.sections{
+    -webkit-flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+} 
+.sections .list{
+    width: 100%;
+    height: 360px;
+    background: #f6514b;
+    position: relative;
+
+}
+.sections .list .list_cent{
+     width: 80%;
+     height: 80%;
+     background: #fedc83;
+     text-align: center;
+     margin-bottom: 20px;
+     z-index: 99;
+     position: absolute;
+     left: 10%;
+     bottom: 10%;
+}
+.sections .list .list_cent p{
+    margin-top:10px;
+    color: #f6514b;
+}
+.sections .list .list_cent .cent p{
+     width: 100%;
+     height: 20px;
+     display: flex;
+}
+.sections .list .list_cent .cent p span{
+     flex: 1;
+}
+.begin .btn{
+ width: 80px;
+ height: 30px;
+ background: #fec434;
+ border:none;
+margin-top: 30px;
+}
+
+
+
+   

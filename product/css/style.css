@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+#box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tabs{
+  width: 100%;
+  height: 50px;
+  border:1px solid #ccc;
+}
+
+.top {
+  height: 4.7rem;
+  line-height: 4.7rem;
+  background: #fe5051;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.content {
+  flex: 1;
+  background: #ccc;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.common {
+  flex: 1;
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 0 .5rem;
+  box-sizing: border-box;
+}
+
+.common > p{
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-left: 20px;
+}
+.common > p span{
+  color: #ccc;
+}
+.nav {
+  width: 80%;
+  height: 2.5rem;
+  display: flex;
+}
+
+.nav > li {
+  flex: 1;
+  font-size: 1.4rem;
+  color: #666;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.navlist {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+}
+
+.navlist > li {
+  flex: 1;
+  border-right: 1px dashed #333;
+  font-size: 2rem;
+  color: #000;
+  line-height: 3.5rem;
+  text-align: center;
+}
+
+.navlist > li:first-child {
+  flex: 2;
+}
+
+.navlist > li:first-child > span {
+  font-size: 3.6rem;
+  color: orange;
+  line-height: 3.5rem;
+}
+
+.navlist > li:first-child > b {
+  font-size: 2rem;
+  color: orange;
+  line-height: 3.5rem;
+}
+
+.navlist > li:last-child {
+  border-right: none;
+}
+
+.footer {
+  height: 5.3rem;
+  width: 100%;
+  border-top: 1px solid #333;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.list > li {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.list > li > i {
+  font-size: 2.5rem;
+  color: #666;
+  display: block;
+  margin-bottom: .3rem;
+}

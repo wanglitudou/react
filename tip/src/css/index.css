@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.tooltip{
+    height: 42px;
+    overflow: hidden;
+}
+.info{
+     text-align: center;
+     border: 1px solid #ccc;
+     width: 80%;
+     height: auto;
+}

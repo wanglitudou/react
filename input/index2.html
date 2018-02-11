@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="lib/react.js"></script>
+    <script src="lib/react-dom.js"></script>
+    <script src="lib/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+     class Input1 extends React.Component{
+         constructor(){
+             super()
+             this.handleChange=this.handleChange.bind(this)
+         }
+         handleChange(e){
+             console.log(e.target.value)
+             this.props.valueFromInput1(e.target.value)
+         }
+         render(){
+             return <p>表单1: <input type="text" value={this.props.input1} onChange={this.handleChange} /></p>
+         }
+     }
+
+     class Input2 extends React.Component{
+         constructor(){
+             super()
+             this.handleChange=this.handleChange.bind(this)
+         }
+         handleChange(e){
+              console.log(e.target.value);
+              this.props.valueFromInput1(e.target.value)
+         }
+         render(){
+            return <p>表单2: <input type="text" value={this.props.input1} onChange={this.handleChange} /></p>
+         }
+     }
+
+     class Wrap extends React.Component{
+         constructor(){
+             super()
+             this.state={
+                 input1:''
+             }
+             this.valueFromInput1=this.valueFromInput1.bind(this)
+           
+         }
+         valueFromInput1(val){
+             this.setState(function(state){
+                 state.input1=val;
+                 return state
+             })  
+         }
+         valueFromInput2(val){
+            console.log("from Wrap:",val);
+            this.setState(function(state){
+                state.input2=val;
+                console.log(state);
+                return state
+            })
+         }
+
+         render(){
+             return (
+                 <div>
+                  <Input1 input1={this.state.input1} valueFromInput1={this.valueFromInput1} input2={this.state.input2} />
+                  <Input2 input1={this.state.input1} valueFromInput1={this.valueFromInput1}/>   
+                 </div>
+             )
+         }
+     }
+      ReactDOM.render(
+       <Wrap/>,
+        document.getElementById('root')
+      );
+
+    </script>
+  </body>
+</html>
